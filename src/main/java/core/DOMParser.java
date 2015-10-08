@@ -20,11 +20,11 @@ public class DOMParser {
 		
 		String node = "kadu-response";
 		
-		String element_01 = "orig-kw";
-		String element_02 = "engine";
-		String element_03 = "kadu-version";
+		String element_01 = "forms-action-type";
+		String element_02 = "resultGrade";
+		String element_03 = "kadu-index-info";
 		String element_04 = "response-time";
-		String element_05 = "deals";
+		String element_05 = "categories";
 		String attribute_01 = "count";
 		
 		// Get the DOM Builder Factory
@@ -46,13 +46,13 @@ public class DOMParser {
 			Node nNode = nList.item(i);
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element eElement = (Element) nNode;
-				System.out.println("Key Word: "
+				System.out.println("Action Type: "
 						+ eElement.getElementsByTagName(element_01).item(0)
 						.getChildNodes().item(0).getNodeValue());
-				System.out.println("Egine: "
+				System.out.println("Result: "
 						+ eElement.getElementsByTagName(element_02).item(0)
 						.getChildNodes().item(0).getNodeValue());
-				System.out.println("Version: "
+				System.out.println("Index: "
 						+ eElement.getElementsByTagName(element_03).item(0)
 						.getChildNodes().item(0).getNodeValue());
 				System.out.println("Response time: "
@@ -69,7 +69,7 @@ public class DOMParser {
 			Node nNode = nList2.item(i);
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element eElement = (Element) nNode;
-				System.out.println("Number of deals: "
+				System.out.println("Number of categories: "
 						+ eElement.getAttribute(attribute_01).trim());
 				
 			}

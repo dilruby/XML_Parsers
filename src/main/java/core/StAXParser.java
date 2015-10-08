@@ -12,19 +12,19 @@ public class StAXParser {
 	public static void main(String[] a) throws IOException, XMLStreamException {
 		URL url = new URL("http://learn2test.net/sdc.xml");
 		
-		final String element_01 = "orig-kw";
-		final String element_02 = "engine";
-		final String element_03 = "kadu-version";
+		final String element_01 = "forms-action-type";
+		final String element_02 = "resultGrade";
+		final String element_03 = "kadu-index-info";
 		final String element_04 = "response-time";
 		
-		final String element_05 = "deals";
+		final String element_05 = "categories";
 		
-		final String element_name_01 = "Key Word: ";
-		final String element_name_02 = "Engine: ";
-		final String element_name_03 = "Version: ";
+		final String element_name_01 = "Action Type: ";
+		final String element_name_02 = "Result: ";
+		final String element_name_03 = "Index: ";
 		final String element_name_04 = "Response time: ";
 		
-		final String element_name_05 = "Number of deals: ";
+		final String element_name_05 = "Number of categories: ";
 		
 		InputStream in = url.openStream();
 		

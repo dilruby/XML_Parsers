@@ -12,12 +12,12 @@ public class DOMXPathParser {
 		
 		String url = "http://learn2test.net/sdc.xml";
 		
-		String xpath_element_01 = "//server/orig-kw";
-		String xpath_element_02 = "//server/engine";
-		String xpath_element_03 = "//server/kadu-version";
+		String xpath_element_01 = "//server/forms-action-type";
+		String xpath_element_02 = "//server/resultGrade";
+		String xpath_element_03 = "//server/kadu-index-info";
 		String xpath_element_04 = "//response-time";
 		
-		String xpath_attribute_01 = "//deals/@count";
+		String xpath_attribute_01 = "//categories/@count";
 		
 		// Get the DOM Builder Factory
 		DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
@@ -41,11 +41,11 @@ public class DOMXPathParser {
 		String element_04 = xpath.compile(xpath_element_04).evaluate(d);
 		String attribute_01 = xpath.compile(xpath_attribute_01).evaluate(d);
 		
-		System.out.println("Key Word: " + element_01);
-		System.out.println("Engine: " + element_02);
-		System.out.println("Version: " + element_03);
+		System.out.println("Action Type: " + element_01);
+		System.out.println("Result: " + element_02);
+		System.out.println("Index: " + element_03);
 		System.out.println("Response time: " + element_04);
-		System.out.println("Number of deals: " + attribute_01);
+		System.out.println("Number of categories: " + attribute_01);
 	}
 
 }
